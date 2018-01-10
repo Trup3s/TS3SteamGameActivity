@@ -66,14 +66,14 @@ const char* ts3plugin_name() {
 	/* TeamSpeak expects UTF-8 encoded characters. Following demonstrates a possibility how to convert UTF-16 wchar_t into UTF-8. */
 	static char* result = NULL;  /* Static variable so it's allocated only once */
 	if(!result) {
-		const wchar_t* name = L"Test Plugin";
+		const wchar_t* name = L"SteamGameActivity";
 		if(wcharToUtf8(name, &result) == -1) {  /* Convert name into UTF-8 encoded result */
-			result = "Test Plugin";  /* Conversion failed, fallback here */
+			result = "SteamGameActivity";  /* Conversion failed, fallback here */
 		}
 	}
 	return result;
 #else
-	return "Test Plugin";
+	return "SteamGameActivity";
 #endif
 }
 
@@ -96,7 +96,7 @@ const char* ts3plugin_author() {
 /* Plugin description */
 const char* ts3plugin_description() {
 	/* If you want to use wchar_t, see ts3plugin_name() on how to use */
-    return "This plugin demonstrates the TeamSpeak 3 client plugin architecture.";
+    return "This plugin displays information about the current game you're playing in steam.";
 }
 
 /* Set TeamSpeak 3 callback functions */
