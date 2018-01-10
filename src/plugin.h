@@ -1,7 +1,8 @@
 /*
  * TeamSpeak 3 demo plugin
  *
- * Copyright (c) 2008-2017 TeamSpeak Systems GmbH
+ * Credits TeamSpeak Systems GmbH
+ * Copyright 2018 Nikolai Zimmermann
  */
 
 #ifndef PLUGIN_H
