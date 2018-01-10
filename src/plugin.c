@@ -164,7 +164,7 @@ int ts3plugin_offersConfigure() {
 	 * PLUGIN_OFFERS_CONFIGURE_NEW_THREAD - Plugin does implement ts3plugin_configure and requests to run this function in an own thread
 	 * PLUGIN_OFFERS_CONFIGURE_QT_THREAD  - Plugin does implement ts3plugin_configure and requests to run this function in the Qt GUI thread
 	 */
-	return PLUGIN_OFFERS_NO_CONFIGURE;  /* In this case ts3plugin_configure does not need to be implemented */
+	return PLUGIN_OFFERS_CONFIGURE_QT_THREAD;
 }
 
 /* Plugin might offer a configuration window. If ts3plugin_offersConfigure returns 0, this function does not need to be implemented. */
@@ -186,7 +186,7 @@ void ts3plugin_registerPluginID(const char* id) {
 
 /* Plugin command keyword. Return NULL or "" if not used. */
 const char* ts3plugin_commandKeyword() {
-	return "test";
+	return NULL;
 }
 
 static void print_and_free_bookmarks_list(struct PluginBookmarkList* list)
